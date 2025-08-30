@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import { Plane, Users, Globe, Award, ArrowRight, MessageCircle } from "lucide-react";
-import heroImage from "@/assets/hero-aircraft.jpg";
+import heroImage from "@/assets/ba-aircraft-hero.jpg";
 
 const HomePage = () => {
   const features = [
@@ -50,22 +50,22 @@ const HomePage = () => {
         
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-            Welcome to <span className="text-primary-light">SkyWings</span> Virtual Airline
+            Welcome to <span className="text-primary-light">Virtual BAW</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-            Experience professional virtual aviation with British Airways-inspired operations. 
+            Experience professional virtual aviation operations modeled after British Airways. 
             Join our elite community of pilots flying realistic routes worldwide.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg">
-              <a href="https://join.skywings-va.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
                 Join as Pilot
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg">
-              <a href="https://portal.skywings-va.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer">
                 Pilot Portal
               </a>
             </Button>
@@ -88,7 +88,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">
-              Why Choose SkyWings?
+              Why Choose Virtual BAW?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We offer a premium virtual airline experience with professional standards, 
@@ -123,7 +123,7 @@ const HomePage = () => {
               Get Started Today
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to begin your journey with SkyWings? Explore our resources or join our community.
+              Ready to begin your journey with Virtual BAW? Explore our resources or join our community.
             </p>
           </div>
 
@@ -192,13 +192,13 @@ const HomePage = () => {
             Ready to Take Flight?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of pilots already flying with SkyWings. Experience professional virtual aviation 
+            Join hundreds of pilots already flying with Virtual BAW. Experience professional virtual aviation 
             with realistic operations and an active community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4">
-              <a href="https://join.skywings-va.com" target="_blank" rel="noopener noreferrer">
-                Join SkyWings Now
+              <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer">
+                Join Virtual BAW Now
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4">

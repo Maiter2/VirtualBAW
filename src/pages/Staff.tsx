@@ -9,9 +9,9 @@ const Staff = () => {
       name: "Captain James Mitchell",
       role: "Chief Executive Officer",
       department: "Executive",
-      description: "Leading SkyWings with 15+ years of virtual aviation experience",
+      description: "Leading Virtual BAW with 15+ years of virtual aviation experience",
       contact: {
-        email: "ceo@skywings-va.com",
+        email: "ceo@virtual-baw.com",
         discord: "CaptMitchell#1234",
       },
       icon: Crown,
@@ -22,7 +22,7 @@ const Staff = () => {
       department: "Operations",
       description: "Overseeing daily flight operations and route planning",
       contact: {
-        email: "ops@skywings-va.com",
+        email: "ops@virtual-baw.com",
         discord: "SarahOps#5678",
       },
       icon: Plane,
@@ -33,7 +33,7 @@ const Staff = () => {
       department: "Training",
       description: "Managing pilot training programs and certification",
       contact: {
-        email: "training@skywings-va.com",
+        email: "training@virtual-baw.com",
         discord: "TrainingCap#9012",
       },
       icon: BookOpen,
@@ -44,7 +44,7 @@ const Staff = () => {
       department: "Technology",
       description: "Managing systems, websites, and technical infrastructure",
       contact: {
-        email: "tech@skywings-va.com", 
+        email: "tech@virtual-baw.com", 
         discord: "TechLisa#3456",
       },
       icon: Settings,
@@ -55,7 +55,7 @@ const Staff = () => {
       department: "Safety",
       description: "Ensuring compliance with operational standards and safety protocols",
       contact: {
-        email: "safety@skywings-va.com",
+        email: "safety@virtual-baw.com",
         discord: "SafetyMike#7890",
       },
       icon: Shield,
@@ -66,7 +66,7 @@ const Staff = () => {
       department: "Community",
       description: "Building pilot community and managing member relations",
       contact: {
-        email: "community@skywings-va.com",
+        email: "community@virtual-baw.com",
         discord: "EmmaComm#2468",
       },
       icon: Users,
@@ -96,7 +96,7 @@ const Staff = () => {
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Meet our dedicated leadership team committed to providing an exceptional virtual aviation experience. 
-            Each member brings expertise and passion to ensure SkyWings operates at the highest professional standards.
+            Each member brings expertise and passion to ensure Virtual BAW operates at the highest professional standards.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ const Staff = () => {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild className="border-white/20 text-white hover:bg-white/10">
-                  <a href="mailto:info@skywings-va.com">
+                  <a href="mailto:info@virtual-baw.com">
                     <Mail className="h-5 w-5 mr-2" />
                     General Inquiries
                   </a>

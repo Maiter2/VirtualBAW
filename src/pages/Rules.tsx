@@ -42,7 +42,7 @@ const Rules = () => {
         "No discriminatory language, harassment, or inappropriate behavior",
         "Keep discussions relevant and constructive in public channels",
         "Resolve conflicts through proper channels (staff mediation if needed)",
-        "Represent SkyWings positively in external aviation communities",
+        "Represent Virtual BAW positively in external aviation communities",
         "Follow Discord community guidelines in all server interactions",
       ],
     },
@@ -183,7 +183,7 @@ const Rules = () => {
               <h3 className="text-2xl font-semibold mb-4">Questions About Our Rules?</h3>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto">
                 Our management team is available to clarify any questions about our policies. 
-                We're here to help ensure everyone has a positive experience with SkyWings.
+                We're here to help ensure everyone has a positive experience with Virtual BAW.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -196,7 +196,7 @@ const Rules = () => {
                   Ask on Discord
                 </a>
                 <a
-                  href="mailto:support@skywings-va.com"
+                  href="mailto:support@virtual-baw.com"
                   className="inline-flex items-center justify-center px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
                 >
                   Email Support

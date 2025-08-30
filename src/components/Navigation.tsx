@@ -16,8 +16,8 @@ const Navigation = () => {
 
   const externalLinks = [
     { href: "https://discord.gg/example", label: "Discord" },
-    { href: "https://join.skywings-va.com", label: "Join Now" },
-    { href: "https://portal.skywings-va.com", label: "Log In" },
+    { href: "https://join.virtual-baw.com", label: "Join Now" },
+    { href: "https://portal.virtual-baw.com", label: "Log In" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -29,7 +29,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-primary font-bold text-xl">
             <Plane className="h-6 w-6" />
-            <span className="font-heading">SkyWings</span>
+            <span className="font-heading">Virtual BAW</span>
           </Link>
 
           {/* Desktop Navigation */}
