@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - Virtual BAW</title>
+    <meta name="description" content="Virtual BAW operational rules and community guidelines for professional virtual aviation operations.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rules-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <svg class="plane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                    </svg>
+                    <span>Virtual BAW</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="fleet.html" class="nav-link">Fleet</a>
+                    <a href="staff.html" class="nav-link">Staff</a>
+                    <a href="rules.html" class="nav-link active">Rules</a>
+                    
+                    <div class="nav-external">
+                        <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="nav-link">Discord</a>
+                        <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                        <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="fleet.html" class="mobile-nav-link">Fleet</a>
+                <a href="staff.html" class="mobile-nav-link">Staff</a>
+                <a href="rules.html" class="mobile-nav-link">Rules</a>
+                <div class="mobile-nav-external">
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Discord</a>
+                    <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                    <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="rules-page">
+        <div class="container">
+            <div class="rules-header">
+                <h1 class="page-title">Rules & Guidelines</h1>
+                <p class="page-subtitle">
+                    Professional standards and community guidelines that ensure a realistic and enjoyable 
+                    virtual aviation experience for all Virtual BAW pilots.
+                </p>
+            </div>
+
+            <!-- Flight Operations Rules -->
+            <section class="rules-section">
+                <div class="section-icon operations">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                    </svg>
+                </div>
+                <h2 class="section-title">Flight Operations</h2>
+                <p class="section-description">Professional flight standards and operational procedures</p>
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Use realistic flight planning with proper routes and altitudes</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Follow standard operating procedures for all aircraft types</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>File proper flight plans using real-world routing when possible</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Maintain professional communication on all frequencies</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Complete required training before operating new aircraft types</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Requirements -->
+            <section class="rules-section">
+                <div class="section-icon activity">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                </div>
+                <h2 class="section-title">Activity Requirements</h2>
+                <p class="section-description">Minimum activity standards to maintain active pilot status</p>
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Complete at least 2 flights per month to remain active</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Participate in community events when available</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Update your availability status if taking extended breaks</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Check Discord regularly for important announcements</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Standards -->
+            <section class="rules-section">
+                <div class="section-icon community">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="m22 21-3-3m0 0a6 6 0 1 0-8.49-8.49L9 9"></path>
+                    </svg>
+                </div>
+                <h2 class="section-title">Community Standards</h2>
+                <p class="section-description">Behavioral expectations for a professional environment</p>
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Treat all members with respect and professionalism</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>No harassment, discrimination, or offensive behavior</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Help new pilots learn and feel welcome in our community</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Keep discussions aviation-related in flight channels</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Report any issues to staff through appropriate channels</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Communication Protocol -->
+            <section class="rules-section">
+                <div class="section-icon communication">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="section-title">Communication Protocol</h2>
+                <p class="section-description">Professional communication standards across all platforms</p>
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Use proper aviation phraseology during flight operations</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Maintain radio discipline on VATSIM/IVAO networks</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Use Discord for coordination and non-operational discussions</span>
+                    </div>
+                    <div class="rule-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>English is the primary language for all operations</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Violation Policy -->
+            <div class="violation-policy">
+                <h2 class="policy-title">Violation Policy</h2>
+                <p class="policy-subtitle">
+                    Our progressive enforcement system ensures fair treatment while maintaining professional standards.
+                </p>
+
+                <div class="violations-grid">
+                    <div class="violation-card minor">
+                        <div class="violation-header">
+                            <h3 class="violation-severity">Minor Violations</h3>
+                            <span class="severity-indicator minor">Level 1</span>
+                        </div>
+                        <div class="violation-examples">
+                            <h4>Examples:</h4>
+                            <ul>
+                                <li>Incorrect callsign usage</li>
+                                <li>Minor SOP deviations</li>
+                                <li>Late flight reports</li>
+                            </ul>
+                        </div>
+                        <div class="violation-consequences">
+                            <h4>Consequences:</h4>
+                            <p>Verbal warning and guidance provided</p>
+                        </div>
+                    </div>
+
+                    <div class="violation-card moderate">
+                        <div class="violation-header">
+                            <h3 class="violation-severity">Moderate Violations</h3>
+                            <span class="severity-indicator moderate">Level 2</span>
+                        </div>
+                        <div class="violation-examples">
+                            <h4>Examples:</h4>
+                            <ul>
+                                <li>Repeated minor violations</li>
+                                <li>Inappropriate communication</li>
+                                <li>Failure to complete required training</li>
+                            </ul>
+                        </div>
+                        <div class="violation-consequences">
+                            <h4>Consequences:</h4>
+                            <p>Written warning and additional training required</p>
+                        </div>
+                    </div>
+
+                    <div class="violation-card serious">
+                        <div class="violation-header">
+                            <h3 class="violation-severity">Serious Violations</h3>
+                            <span class="severity-indicator serious">Level 3</span>
+                        </div>
+                        <div class="violation-examples">
+                            <h4>Examples:</h4>
+                            <ul>
+                                <li>Harassment or discrimination</li>
+                                <li>Deliberate policy violations</li>
+                                <li>Disruptive behavior during events</li>
+                            </ul>
+                        </div>
+                        <div class="violation-consequences">
+                            <h4>Consequences:</h4>
+                            <p>Temporary suspension (1-4 weeks)</p>
+                        </div>
+                    </div>
+
+                    <div class="violation-card severe">
+                        <div class="violation-header">
+                            <h3 class="violation-severity">Severe Violations</h3>
+                            <span class="severity-indicator severe">Level 4</span>
+                        </div>
+                        <div class="violation-examples">
+                            <h4>Examples:</h4>
+                            <ul>
+                                <li>Severe harassment or threats</li>
+                                <li>Malicious disruption of operations</li>
+                                <li>Violation of external network rules</li>
+                            </ul>
+                        </div>
+                        <div class="violation-consequences">
+                            <h4>Consequences:</h4>
+                            <p>Permanent removal from Virtual BAW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="rules-contact-section">
+                <h2 class="contact-section-title">Questions About Our Rules?</h2>
+                <p class="contact-section-subtitle">
+                    Need clarification on any policy or have concerns? Our team is here to help ensure you understand our standards.
+                </p>
+                <div class="contact-options">
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="contact-option">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <div class="contact-content">
+                            <h3 class="contact-title">Ask on Discord</h3>
+                            <p class="contact-description">Get quick answers from our community</p>
+                        </div>
+                    </a>
+                    <a href="mailto:rules@virtual-baw.com" class="contact-option">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div class="contact-content">
+                            <h3 class="contact-title">Email Support</h3>
+                            <p class="contact-description">Formal rule clarifications and appeals</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

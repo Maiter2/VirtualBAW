@@ -1,0 +1,250 @@
+/* Fleet-specific styles */
+.fleet-page {
+    min-height: 100vh;
+    background: var(--gradient-subtle);
+    padding: 3rem 0;
+}
+
+.fleet-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+}
+
+.fleet-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 32rem;
+    margin: 0 auto 3rem;
+}
+
+.stat-card {
+    background-color: var(--card);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.fleet-category {
+    margin-bottom: 3rem;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+}
+
+.category-description {
+    color: var(--muted-foreground);
+}
+
+.aircraft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.aircraft-card {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.aircraft-card:hover {
+    box-shadow: var(--shadow-strong);
+}
+
+.aircraft-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.aircraft-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+}
+
+.registration-badge {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.aircraft-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.aircraft-notes {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+.aircraft-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.spec-label {
+    color: var(--muted-foreground);
+}
+
+.spec-value {
+    font-weight: 500;
+}
+
+.aircraft-routes {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.routes-label {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.routes-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.fleet-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.highlight-card {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-medium);
+}
+
+.highlight-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.fleet-cta {
+    background: var(--gradient-primary);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: var(--shadow-strong);
+    margin-top: 4rem;
+}
+
+.fleet-cta .cta-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.fleet-cta .cta-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fleet-cta .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .fleet-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .fleet-cta .cta-buttons {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .aircraft-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .aircraft-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .aircraft-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

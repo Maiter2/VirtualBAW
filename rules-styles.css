@@ -1,0 +1,351 @@
+/* Rules-specific styles */
+.rules-page {
+    min-height: 100vh;
+    background: var(--gradient-subtle);
+    padding: 3rem 0;
+}
+
+.rules-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.rules-section {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.rules-section:hover {
+    box-shadow: var(--shadow-strong);
+}
+
+.section-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.section-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.section-icon.operations {
+    background-color: var(--primary);
+}
+
+.section-icon.activity {
+    background-color: hsl(220, 60%, 35%);
+}
+
+.section-icon.community {
+    background-color: hsl(220, 50%, 45%);
+}
+
+.section-icon.communication {
+    background-color: hsl(220, 65%, 40%);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+}
+
+.section-description {
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.check-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.rule-item span {
+    font-size: 0.875rem;
+    color: var(--foreground);
+    line-height: 1.4;
+}
+
+.violation-policy {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.policy-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.policy-subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.violations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.violation-card {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-medium);
+    border-left: 4px solid;
+}
+
+.violation-card.minor {
+    border-left-color: hsl(120, 70%, 50%);
+}
+
+.violation-card.moderate {
+    border-left-color: hsl(60, 90%, 50%);
+}
+
+.violation-card.serious {
+    border-left-color: hsl(30, 100%, 50%);
+}
+
+.violation-card.severe {
+    border-left-color: hsl(0, 80%, 50%);
+}
+
+.violation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.violation-severity {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.severity-indicator {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.severity-indicator.minor {
+    background-color: hsl(120, 70%, 50%);
+    color: white;
+}
+
+.severity-indicator.moderate {
+    background-color: hsl(60, 90%, 50%);
+    color: hsl(60, 90%, 20%);
+}
+
+.severity-indicator.serious {
+    background-color: hsl(30, 100%, 50%);
+    color: white;
+}
+
+.severity-indicator.severe {
+    background-color: hsl(0, 80%, 50%);
+    color: white;
+}
+
+.violation-examples,
+.violation-consequences {
+    margin-bottom: 1rem;
+}
+
+.violation-examples h4,
+.violation-consequences h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.violation-examples ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.violation-examples li {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.violation-examples li:before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.violation-consequences p {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    font-style: italic;
+}
+
+.rules-contact-section {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    margin-top: 4rem;
+}
+
+.contact-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.contact-section-subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.contact-option:hover {
+    background-color: var(--accent);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contact-content {
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+}
+
+.contact-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+@media (max-width: 640px) {
+    .violations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-option {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-content {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .violations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .violations-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

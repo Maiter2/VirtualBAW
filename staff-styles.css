@@ -1,0 +1,262 @@
+/* Staff-specific styles */
+.staff-page {
+    min-height: 100vh;
+    background: var(--gradient-subtle);
+    padding: 3rem 0;
+}
+
+.staff-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.staff-card {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.staff-card:hover {
+    box-shadow: var(--shadow-strong);
+}
+
+.staff-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.staff-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.staff-icon.management {
+    background-color: var(--primary);
+}
+
+.staff-icon.operations {
+    background-color: hsl(220, 60%, 35%);
+}
+
+.staff-icon.training {
+    background-color: hsl(220, 50%, 45%);
+}
+
+.staff-icon.fleet {
+    background-color: hsl(220, 65%, 40%);
+}
+
+.staff-icon.community {
+    background-color: hsl(220, 55%, 50%);
+}
+
+.staff-icon.technology {
+    background-color: hsl(220, 70%, 30%);
+}
+
+.staff-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.staff-role {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.staff-department {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.staff-description {
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.staff-contact {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    flex: 1;
+    justify-content: center;
+}
+
+.contact-btn svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contact-btn.email {
+    background-color: var(--primary);
+    color: white;
+}
+
+.contact-btn.email:hover {
+    background-color: var(--primary-dark);
+}
+
+.contact-btn.discord {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    border: 1px solid var(--border);
+}
+
+.contact-btn.discord:hover {
+    background-color: var(--accent);
+}
+
+.staff-contact-section {
+    background-color: var(--card);
+    border-radius: 0.75rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    margin-top: 4rem;
+}
+
+.contact-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.contact-section-subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.contact-option:hover {
+    background-color: var(--accent);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contact-content {
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+}
+
+.contact-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+@media (max-width: 640px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .staff-contact {
+        flex-direction: column;
+    }
+    
+    .contact-option {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-content {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .staff-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

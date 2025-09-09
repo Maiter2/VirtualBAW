@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet - Virtual BAW</title>
+    <meta name="description" content="Explore Virtual BAW's authentic British Airways fleet featuring modern aircraft from A320neos to A380s.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fleet-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <svg class="plane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                    </svg>
+                    <span>Virtual BAW</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="fleet.html" class="nav-link active">Fleet</a>
+                    <a href="staff.html" class="nav-link">Staff</a>
+                    <a href="rules.html" class="nav-link">Rules</a>
+                    
+                    <div class="nav-external">
+                        <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="nav-link">Discord</a>
+                        <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                        <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="fleet.html" class="mobile-nav-link">Fleet</a>
+                <a href="staff.html" class="mobile-nav-link">Staff</a>
+                <a href="rules.html" class="mobile-nav-link">Rules</a>
+                <div class="mobile-nav-external">
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Discord</a>
+                    <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                    <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fleet-page">
+        <div class="container">
+            <div class="fleet-header">
+                <h1 class="page-title">Our Fleet</h1>
+                <p class="page-subtitle">
+                    Experience Virtual BAW's authentic British Airways fleet. From modern A350s to the iconic A380, 
+                    we operate the exact aircraft types that BA flies worldwide.
+                </p>
+                
+                <!-- Fleet Statistics -->
+                <div class="fleet-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">253+</div>
+                        <div class="stat-label">Total Aircraft</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Destinations</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Aircraft Types</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">800+</div>
+                        <div class="stat-label">Daily Flights</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Short-Haul Fleet -->
+            <section class="fleet-category">
+                <div class="category-header">
+                    <h2 class="category-title">Short-Haul</h2>
+                    <p class="category-description">UK domestic and European operations</p>
+                </div>
+
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-TTNA</span>
+                        </div>
+                        <h3 class="aircraft-name">Airbus A320neo</h3>
+                        <p class="aircraft-notes">Latest generation with Club Suite business class</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">3,500 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">180 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">European network</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-NEOP</span>
+                        </div>
+                        <h3 class="aircraft-name">Airbus A321neo</h3>
+                        <p class="aircraft-notes">High-density European routes</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">4,000 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">220 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">UK & European destinations</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-EUPH</span>
+                        </div>
+                        <h3 class="aircraft-name">Airbus A319</h3>
+                        <p class="aircraft-notes">Being phased out gradually</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">3,750 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">144 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">UK domestic & European</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-LCYG</span>
+                        </div>
+                        <h3 class="aircraft-name">Embraer E190</h3>
+                        <p class="aircraft-notes">BA CityFlyer operations from London City</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">2,400 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">98 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">UK regional & European</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medium-Haul Fleet -->
+            <section class="fleet-category">
+                <div class="category-header">
+                    <h2 class="category-title">Medium-Haul</h2>
+                    <p class="category-description">Transatlantic and regional long-haul</p>
+                </div>
+
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-ZBJB</span>
+                        </div>
+                        <h3 class="aircraft-name">Boeing 787-8 Dreamliner</h3>
+                        <p class="aircraft-notes">Fuel-efficient with Club Suite</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">7,350 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">214 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">North America, Middle East</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-ZBKF</span>
+                        </div>
+                        <h3 class="aircraft-name">Boeing 787-9 Dreamliner</h3>
+                        <p class="aircraft-notes">Premium long-haul configuration</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">7,635 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">216 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">Americas, Asia, Middle East</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-ZBLA</span>
+                        </div>
+                        <h3 class="aircraft-name">Boeing 787-10 Dreamliner</h3>
+                        <p class="aircraft-notes">Latest addition with enhanced capacity</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">6,430 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">256 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">High-density medium-haul</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-VIIT</span>
+                        </div>
+                        <h3 class="aircraft-name">Boeing 777-200ER</h3>
+                        <p class="aircraft-notes">Reliable workhorse aircraft</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">7,700 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">275 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">Americas, Asia-Pacific</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long-Haul Fleet -->
+            <section class="fleet-category">
+                <div class="category-header">
+                    <h2 class="category-title">Long-Haul</h2>
+                    <p class="category-description">Intercontinental flagship operations</p>
+                </div>
+
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-XWBA</span>
+                        </div>
+                        <h3 class="aircraft-name">Airbus A350-1000</h3>
+                        <p class="aircraft-notes">Flagship aircraft with Club Suite</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">8,700 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">331 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">Premium long-haul worldwide</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-STBF</span>
+                        </div>
+                        <h3 class="aircraft-name">Boeing 777-300ER</h3>
+                        <p class="aircraft-notes">High-capacity intercontinental</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">7,370 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">396 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">Asia-Pacific, Americas</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <div class="aircraft-header">
+                            <svg class="aircraft-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                            </svg>
+                            <span class="registration-badge">G-XLEC</span>
+                        </div>
+                        <h3 class="aircraft-name">Airbus A380-800</h3>
+                        <p class="aircraft-notes">World's largest passenger aircraft</p>
+                        <div class="aircraft-specs">
+                            <div class="spec">
+                                <span class="spec-label">Range:</span>
+                                <span class="spec-value">8,200 nm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Capacity:</span>
+                                <span class="spec-value">469 passengers</span>
+                            </div>
+                        </div>
+                        <div class="aircraft-routes">
+                            <span class="routes-label">Primary Routes:</span>
+                            <p class="routes-value">Premium destinations worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fleet Highlights -->
+            <div class="fleet-highlights">
+                <div class="highlight-card">
+                    <h3 class="highlight-title">Modern & Efficient</h3>
+                    <p class="highlight-description">
+                        Our fleet features the latest generation aircraft including A350-1000s, 787 Dreamliners, 
+                        and A320neos with reduced emissions and enhanced passenger comfort.
+                    </p>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3 class="highlight-title">Club Suite Experience</h3>
+                    <p class="highlight-description">
+                        All new aircraft feature BA's award-winning Club Suite business class, 
+                        offering direct aisle access and enhanced privacy for premium passengers.
+                    </p>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3 class="highlight-title">Global Connectivity</h3>
+                    <p class="highlight-description">
+                        From short European hops on the A320neo to ultra-long-haul flights on the A350-1000, 
+                        our fleet connects London to over 200 destinations worldwide.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="fleet-cta">
+                <h3 class="cta-title">Ready to Fly the Real BA Fleet?</h3>
+                <p class="cta-subtitle">
+                    Experience authentic British Airways operations with our exact aircraft types and routes. 
+                    Join Virtual BAW and pilot the same aircraft BA flies every day.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-cta">
+                        Join as Pilot
+                    </a>
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cta">
+                        Ask Questions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,28 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual BAW - Professional Virtual Airline Operations</title>
-    <meta name="description" content="Join Virtual BAW - A premium British Airways-inspired virtual airline offering professional flight operations, comprehensive training, and an active pilot community." />
-    <meta name="author" content="Virtual BAW" />
-
-    <meta property="og:title" content="Virtual BAW - Professional Virtual Airline Operations" />
-    <meta property="og:description" content="Join Virtual BAW - A premium British Airways-inspired virtual airline offering professional flight operations, comprehensive training, and an active pilot community." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@virtual_baw" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta name="description" content="Join Virtual BAW - A premium British Airways-inspired virtual airline offering professional flight operations, comprehensive training, and an active pilot community.">
+    <meta name="author" content="Virtual BAW">
+    
+    <meta property="og:title" content="Virtual BAW - Professional Virtual Airline Operations">
+    <meta property="og:description" content="Join Virtual BAW - A premium British Airways-inspired virtual airline offering professional flight operations, comprehensive training, and an active pilot community.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@virtual_baw">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <svg class="plane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                    </svg>
+                    <span>Virtual BAW</span>
+                </a>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="fleet.html" class="nav-link">Fleet</a>
+                    <a href="staff.html" class="nav-link">Staff</a>
+                    <a href="rules.html" class="nav-link">Rules</a>
+                    
+                    <div class="nav-external">
+                        <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="nav-link">Discord</a>
+                        <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                        <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="fleet.html" class="mobile-nav-link">Fleet</a>
+                <a href="staff.html" class="mobile-nav-link">Staff</a>
+                <a href="rules.html" class="mobile-nav-link">Rules</a>
+                <div class="mobile-nav-external">
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Discord</a>
+                    <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Log In</a>
+                    <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to <span class="hero-highlight">Virtual BAW</span>
+            </h1>
+            <p class="hero-subtitle">
+                Experience professional virtual aviation operations modeled after British Airways. 
+                Join our elite community of pilots flying realistic routes worldwide.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-hero">
+                    Join as Pilot
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+                <a href="https://portal.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-hero">
+                    Pilot Portal
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Active Pilots</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Aircraft Types</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">200+</div>
+                    <div class="stat-label">Destinations</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Operations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Virtual BAW?</h2>
+                <p class="section-subtitle">
+                    We offer a premium virtual airline experience with professional standards, 
+                    comprehensive training, and an active global community.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Fleet</h3>
+                    <p class="feature-description">Fly modern aircraft from our comprehensive fleet, featuring Boeing and Airbus types with authentic liveries and procedures.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m22 21-3-3m0 0a6 6 0 1 0-8.49-8.49L9 9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Active Community</h3>
+                    <p class="feature-description">Join hundreds of virtual pilots from around the world in our vibrant Discord community and group events.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="m4.93 4.93 4.24 4.24"></path>
+                            <path d="m14.83 9.17 4.24-4.24"></path>
+                            <path d="m14.83 14.83 4.24 4.24"></path>
+                            <path d="m9.17 14.83-4.24 4.24"></path>
+                            <circle cx="12" cy="12" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Global Routes</h3>
+                    <p class="feature-description">Experience realistic flight operations across our extensive route network covering Europe, Americas, and Asia-Pacific.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                            <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Training</h3>
+                    <p class="feature-description">Comprehensive training programs and certifications to advance your virtual aviation career with us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">
+                    Ready to begin your journey with Virtual BAW? Explore our resources or join our community.
+                </p>
+            </div>
+
+            <div class="quick-links-grid">
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m22 21-3-3m0 0a6 6 0 1 0-8.49-8.49L9 9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="quick-link-title">Join Our Community</h3>
+                    <p class="quick-link-description">Connect with fellow pilots, get support, and stay updated with the latest news.</p>
+                    <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Discord Server
+                    </a>
+                </div>
+
+                <div class="quick-link-card">
+                    <div class="quick-link-icon primary-light">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m17.5 19H9l-7 7-4-4 7-7V8l8-14 1 1 2.5 2.5L15 16l4 2 .5.5-1 1L17.5 19Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="quick-link-title">Explore Our Fleet</h3>
+                    <p class="quick-link-description">Discover our comprehensive aircraft fleet and find your next favorite to fly.</p>
+                    <a href="fleet.html" class="btn btn-outline btn-full">
+                        View Fleet
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="quick-link-card">
+                    <div class="quick-link-icon accent">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                            <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="quick-link-title">Learn the Rules</h3>
+                    <p class="quick-link-description">Review our operational standards and community guidelines before you start flying.</p>
+                    <a href="rules.html" class="btn btn-outline btn-full">
+                        Read Rules
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Take Flight?</h2>
+            <p class="cta-subtitle">
+                Join hundreds of pilots already flying with Virtual BAW. Experience professional virtual aviation 
+                with realistic operations and an active community.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" class="btn btn-cta">
+                    Join Virtual BAW Now
+                </a>
+                <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cta">
+                    Ask Questions First
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
