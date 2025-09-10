@@ -284,6 +284,112 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
+        .password-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .password-modal-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .password-modal h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .password-modal p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 24px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .password-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .password-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .password-actions button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-change-password {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+
+        .btn-change-password:hover {
+            background: linear-gradient(45deg, #059669, #047857);
+        }
+
+        .btn-skip {
+            background: rgba(107, 114, 128, 0.8);
+            color: white;
+        }
+
+        .btn-skip:hover {
+            background: rgba(107, 114, 128, 1);
+        }
+
+        .btn-skip:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .password-strength {
+            font-size: 12px;
+            margin-top: 4px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .strength-weak {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        .strength-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fcd34d;
+        }
+
+        .strength-strong {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+        }
+
         @media (max-width: 768px) {
             .admin-header {
                 flex-direction: column;
@@ -493,18 +599,59 @@
         </div>
     </div>
 
+    <!-- Password Change Modal -->
+    <div id="passwordModal" class="password-modal">
+        <div class="password-modal-content">
+            <h2 id="passwordModalTitle">Change Your Password</h2>
+            <p id="passwordModalMessage">For security reasons, you need to change your password.</p>
+            
+            <form id="passwordChangeForm" class="password-form">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" name="currentPassword" placeholder="Enter current password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Enter new password" required>
+                    <div id="passwordStrength" class="password-strength" style="display: none;"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm new password" required>
+                </div>
+                
+                <div class="password-actions">
+                    <button type="submit" class="btn-change-password">Change Password</button>
+                    <button type="button" id="skipPasswordChange" class="btn-skip">Skip for Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Admin credentials (in a real app, this would be handled server-side)
-        const ADMIN_CREDENTIALS = [
+        // Admin credentials with password tracking (in a real app, this would be handled server-side)
+        let ADMIN_CREDENTIALS = [
             {
                 email: 'admin@virtual-baw.com',
-                password: 'VirtualBAW2024!'
+                password: 'VirtualBAW2024!',
+                firstLogin: true,
+                lastPasswordChange: null
             },
             {
                 email: 'manager@virtual-baw.com', 
-                password: 'ManagerBAW2024!'
+                password: 'ManagerBAW2024!',
+                firstLogin: true,
+                lastPasswordChange: null
             }
         ];
+
+        // Load saved credentials and password data from localStorage
+        const savedCredentials = localStorage.getItem('adminCredentials');
+        if (savedCredentials) {
+            ADMIN_CREDENTIALS = JSON.parse(savedCredentials);
+        }
 
         // DOM elements
         const loginContainer = document.getElementById('loginContainer');
@@ -512,6 +659,87 @@
         const loginForm = document.getElementById('loginForm');
         const errorMessage = document.getElementById('errorMessage');
         const logoutBtn = document.getElementById('logoutBtn');
+        const passwordModal = document.getElementById('passwordModal');
+        const passwordChangeForm = document.getElementById('passwordChangeForm');
+        const skipPasswordChange = document.getElementById('skipPasswordChange');
+        const passwordModalTitle = document.getElementById('passwordModalTitle');
+        const passwordModalMessage = document.getElementById('passwordModalMessage');
+
+        let currentUserIndex = -1;
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            const strengthElement = document.getElementById('passwordStrength');
+            let strength = 0;
+            let message = '';
+
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            if (strength < 3) {
+                message = 'Weak - Use more characters, numbers, and symbols';
+                strengthElement.className = 'password-strength strength-weak';
+            } else if (strength < 5) {
+                message = 'Medium - Add more complexity for better security';
+                strengthElement.className = 'password-strength strength-medium';
+            } else {
+                message = 'Strong - Good password security';
+                strengthElement.className = 'password-strength strength-strong';
+            }
+
+            strengthElement.textContent = message;
+            strengthElement.style.display = 'block';
+            return strength >= 3;
+        }
+
+        // Check if password change is needed
+        function needsPasswordChange(userIndex) {
+            const user = ADMIN_CREDENTIALS[userIndex];
+            
+            // First login is mandatory
+            if (user.firstLogin) {
+                return { required: true, reason: 'first' };
+            }
+
+            // Check if 6 months have passed
+            if (user.lastPasswordChange) {
+                const lastChange = new Date(user.lastPasswordChange);
+                const sixMonthsAgo = new Date();
+                sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+                
+                if (lastChange < sixMonthsAgo) {
+                    return { required: false, reason: 'expired' };
+                }
+            }
+
+            return { required: false, reason: 'none' };
+        }
+
+        // Show password change modal
+        function showPasswordChangeModal(userIndex, isRequired, reason) {
+            currentUserIndex = userIndex;
+            
+            if (reason === 'first') {
+                passwordModalTitle.textContent = 'Welcome! Change Your Password';
+                passwordModalMessage.textContent = 'This is your first login. For security reasons, you must change your password before continuing.';
+                skipPasswordChange.style.display = 'none';
+            } else if (reason === 'expired') {
+                passwordModalTitle.textContent = 'Password Update Recommended';
+                passwordModalMessage.textContent = 'It\'s been 6 months since your last password change. We recommend updating it for better security.';
+                skipPasswordChange.style.display = 'block';
+                skipPasswordChange.disabled = false;
+            }
+
+            passwordModal.style.display = 'flex';
+        }
+
+        // Save credentials to localStorage
+        function saveCredentials() {
+            localStorage.setItem('adminCredentials', JSON.stringify(ADMIN_CREDENTIALS));
+        }
 
         // Login form submission
         loginForm.addEventListener('submit', function(e) {
@@ -520,23 +748,105 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            // Check if credentials match any of the admin accounts
-            const isValidLogin = ADMIN_CREDENTIALS.some(credential => 
+            // Find matching credentials
+            const userIndex = ADMIN_CREDENTIALS.findIndex(credential => 
                 credential.email === email && credential.password === password
             );
             
-            if (isValidLogin) {
-                // Successful login
-                loginContainer.style.display = 'none';
-                adminDashboard.style.display = 'block';
-                errorMessage.style.display = 'none';
+            if (userIndex !== -1) {
+                // Check if password change is needed
+                const passwordCheck = needsPasswordChange(userIndex);
                 
-                // Store login state
-                sessionStorage.setItem('adminLoggedIn', 'true');
+                if (passwordCheck.required || passwordCheck.reason === 'expired') {
+                    showPasswordChangeModal(userIndex, passwordCheck.required, passwordCheck.reason);
+                } else {
+                    // Successful login without password change needed
+                    loginContainer.style.display = 'none';
+                    adminDashboard.style.display = 'block';
+                    errorMessage.style.display = 'none';
+                    
+                    // Store login state
+                    sessionStorage.setItem('adminLoggedIn', 'true');
+                    sessionStorage.setItem('currentUserIndex', userIndex.toString());
+                }
             } else {
                 // Failed login
                 errorMessage.style.display = 'block';
                 document.getElementById('password').value = '';
+            }
+        });
+
+        // Password change form submission
+        passwordChangeForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate current password
+            if (currentPassword !== ADMIN_CREDENTIALS[currentUserIndex].password) {
+                alert('Current password is incorrect.');
+                return;
+            }
+            
+            // Validate new password
+            if (!checkPasswordStrength(newPassword)) {
+                alert('Password is too weak. Please choose a stronger password.');
+                return;
+            }
+            
+            // Validate password confirmation
+            if (newPassword !== confirmPassword) {
+                alert('New passwords do not match.');
+                return;
+            }
+            
+            // Update password
+            ADMIN_CREDENTIALS[currentUserIndex].password = newPassword;
+            ADMIN_CREDENTIALS[currentUserIndex].firstLogin = false;
+            ADMIN_CREDENTIALS[currentUserIndex].lastPasswordChange = new Date().toISOString();
+            
+            // Save to localStorage
+            saveCredentials();
+            
+            // Hide modal and show dashboard
+            passwordModal.style.display = 'none';
+            loginContainer.style.display = 'none';
+            adminDashboard.style.display = 'block';
+            
+            // Store login state
+            sessionStorage.setItem('adminLoggedIn', 'true');
+            sessionStorage.setItem('currentUserIndex', currentUserIndex.toString());
+            
+            // Clear form
+            passwordChangeForm.reset();
+            document.getElementById('passwordStrength').style.display = 'none';
+            
+            alert('Password changed successfully!');
+        });
+
+        // Skip password change (only for non-mandatory changes)
+        skipPasswordChange.addEventListener('click', function() {
+            passwordModal.style.display = 'none';
+            loginContainer.style.display = 'none';
+            adminDashboard.style.display = 'block';
+            
+            // Store login state
+            sessionStorage.setItem('adminLoggedIn', 'true');
+            sessionStorage.setItem('currentUserIndex', currentUserIndex.toString());
+            
+            // Clear form
+            passwordChangeForm.reset();
+            document.getElementById('passwordStrength').style.display = 'none';
+        });
+
+        // Password strength checking on input
+        document.getElementById('newPassword').addEventListener('input', function(e) {
+            if (e.target.value.length > 0) {
+                checkPasswordStrength(e.target.value);
+            } else {
+                document.getElementById('passwordStrength').style.display = 'none';
             }
         });
 
@@ -550,13 +860,34 @@
             document.getElementById('password').value = '';
             errorMessage.style.display = 'none';
             sessionStorage.removeItem('adminLoggedIn');
+            sessionStorage.removeItem('currentUserIndex');
         });
 
         // Check if already logged in
         window.addEventListener('load', function() {
             if (sessionStorage.getItem('adminLoggedIn') === 'true') {
-                loginContainer.style.display = 'none';
-                adminDashboard.style.display = 'block';
+                const userIndex = parseInt(sessionStorage.getItem('currentUserIndex') || '0');
+                
+                // Check if password change is needed for returning user
+                const passwordCheck = needsPasswordChange(userIndex);
+                if (passwordCheck.reason === 'expired') {
+                    showPasswordChangeModal(userIndex, false, 'expired');
+                } else {
+                    loginContainer.style.display = 'none';
+                    adminDashboard.style.display = 'block';
+                }
+            }
+        });
+
+        // Close modal when clicking outside
+        passwordModal.addEventListener('click', function(e) {
+            if (e.target === passwordModal) {
+                // Only allow closing if it's not a mandatory change
+                const user = ADMIN_CREDENTIALS[currentUserIndex];
+                if (!user.firstLogin) {
+                    passwordModal.style.display = 'none';
+                    loginContainer.style.display = 'flex';
+                }
             }
         });
 
