@@ -495,10 +495,16 @@
 
     <script>
         // Admin credentials (in a real app, this would be handled server-side)
-        const ADMIN_CREDENTIALS = {
-            email: 'admin@virtual-baw.com',
-            password: 'VirtualBAW2024!'
-        };
+        const ADMIN_CREDENTIALS = [
+            {
+                email: 'admin@virtual-baw.com',
+                password: 'VirtualBAW2024!'
+            },
+            {
+                email: 'manager@virtual-baw.com', 
+                password: 'ManagerBAW2024!'
+            }
+        ];
 
         // DOM elements
         const loginContainer = document.getElementById('loginContainer');
@@ -514,7 +520,12 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            if (email === ADMIN_CREDENTIALS.email && password === ADMIN_CREDENTIALS.password) {
+            // Check if credentials match any of the admin accounts
+            const isValidLogin = ADMIN_CREDENTIALS.some(credential => 
+                credential.email === email && credential.password === password
+            );
+            
+            if (isValidLogin) {
                 // Successful login
                 loginContainer.style.display = 'none';
                 adminDashboard.style.display = 'block';
