@@ -183,6 +183,10 @@
             document.getElementById('loginContainer').style.display = 'none';
             document.getElementById('rickRollContainer').style.display = 'block';
             document.body.style.overflow = 'hidden';
+            
+            // Force the video to play with sound by reloading the iframe
+            const iframe = document.querySelector('#rickRollContainer iframe');
+            iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&start=0&mute=0&loop=1&controls=0';
         }
 
         function closeRickRoll() {
