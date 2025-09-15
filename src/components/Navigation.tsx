@@ -10,6 +10,7 @@ const Navigation = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/fleet", label: "Fleet" },
+    { href: "/routes", label: "Routes" },
     { href: "/staff", label: "Staff" },
     { href: "/rules", label: "Rules" },
   ];
