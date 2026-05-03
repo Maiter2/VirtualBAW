@@ -60,7 +60,7 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg">
               <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                Join as Pilot
+                Become a Virtual BAW Pilot
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
@@ -138,7 +138,7 @@ const HomePage = () => {
                   Connect with fellow pilots, get support, and stay updated with the latest news.
                 </p>
                 <Button className="w-full" asChild>
-                  <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.gg/9knXMDSx" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Discord Server
                   </a>
@@ -197,12 +197,12 @@ const HomePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4">
-              <a href="https://join.virtual-baw.com" target="_blank" rel="noopener noreferrer">
-                Join Virtual BAW Now
+              <a href="https://vamsys.io/register/vbaw" target="_blank" rel="noopener noreferrer">
+                Become a Pilot
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4">
-              <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/9knXMDSx" target="_blank" rel="noopener noreferrer">
                 Ask Questions First
               </a>
             </Button>
