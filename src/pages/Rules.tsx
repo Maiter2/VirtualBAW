@@ -187,7 +187,7 @@ const Rules = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://discord.gg/example"
+                  href="https://discord.gg/sTMYAnzfFb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-medium rounded-lg hover:bg-white/90 transition-colors"
@@ -196,7 +196,7 @@ const Rules = () => {
                   Ask on Discord
                 </a>
                 <a
-                  href="mailto:support@virtual-baw.com"
+                  href="mailto:admin@virtual-baw.org"
                   className="inline-flex items-center justify-center px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
                 >
                   Email Support
