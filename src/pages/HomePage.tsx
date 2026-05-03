@@ -138,7 +138,7 @@ const HomePage = () => {
                   Connect with fellow pilots, get support, and stay updated with the latest news.
                 </p>
                 <Button className="w-full" asChild>
-                  <a href="https://discord.gg/9knXMDSx" target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.gg/sTMYAnzfFb" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Discord Server
                   </a>
@@ -202,7 +202,7 @@ const HomePage = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4">
-              <a href="https://discord.gg/9knXMDSx" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/sTMYAnzfFb" target="_blank" rel="noopener noreferrer">
                 Ask Questions First
               </a>
             </Button>
