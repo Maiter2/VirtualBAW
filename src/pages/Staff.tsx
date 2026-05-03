@@ -152,7 +152,7 @@ const Staff = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" asChild>
-                  <a href="https://discord.gg/example" target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.gg/sTMYAnzfFb" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="h-5 w-5 mr-2" />
                     Join Discord
                   </a>
