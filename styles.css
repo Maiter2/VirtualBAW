@@ -294,8 +294,12 @@ body {
     line-height: 1.1;
 }
 
-.hero-highlight {
-    color: var(--primary-light);
+.hero-highlight-blue {
+    color: #075aaa;
+}
+
+.hero-highlight-red {
+    color: #eb2226;
 }
 
 .hero-subtitle {
